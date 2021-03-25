@@ -49,10 +49,15 @@
     height: calc(100% - 50px);
 }
 
+.first_section{
+    padding-top: 80px;
+}
+
 .upper_nav_bar{
     height: 50px;
     width: 100%;
     background-color: rgba(0,0,0, 0.4);
+    position:fixed;
 }
 
 
