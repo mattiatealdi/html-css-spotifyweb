@@ -173,17 +173,13 @@ main .content{
     height: 150px;
 }
 
-footer #player{
-    
-}
 
 footer #player .player_album{
-    width: 20%;
-    overflow:auto;
+    display: flex;
 }
 
 footer #player .player_album img{
-    width: 20%;
+    width: 15%;
     padding-left: 20px;
 }
 
@@ -191,6 +187,19 @@ footer #player .player_album .current_play{
     padding-left: 20px;
     padding-top: 10px;
 }
+
+
+.icons_current_play{
+    padding-left: 40px;
+}
+
+.icons_current_play i{
+    padding: 15px 0px 0 10px;
+    font-size: 20px;
+    color:gray;
+}
+
+
 
 /* media queries */
 @media (max-width: 600px){
@@ -211,4 +220,12 @@ footer #player .player_album .current_play{
     main .content .call_to_action{
         width: calc(100% - 50px);
     }
+}
+
+.player_controller{
+    width: 50%;
+}
+
+.player_audio{
+    width: 20%;
 }
