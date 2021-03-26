@@ -182,6 +182,16 @@ footer #player .player_album img{
     width: 15%;
     padding-left: 20px;
 }
+.player_album{
+    width: 30%;
+}
+.player_controller{
+    width: 40%;
+}
+
+.player_audio{
+    width: 30%;
+}
 
 footer #player .player_album .current_play{
     padding-left: 20px;
@@ -199,7 +209,42 @@ footer #player .player_album .current_play{
     color:gray;
 }
 
+.player_controller{
+    display: flex;
+}
 
+.player_controller .player_media{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position:relative;
+    margin-top:40px;
+}
+
+.player_media ._icons{
+    position:absolute;
+    top:-40px;
+    left: 35%;
+    font-size: 25px;
+    width: 100%;
+}
+
+.player_media ._icons i{
+    padding: 0 1%;
+    padding-bottom: 5px;
+}
+
+.player_controller .line{
+    width: 80%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+#first_time, #second_time{
+    font-size: 12px;
+}
 
 /* media queries */
 @media (max-width: 600px){
@@ -222,10 +267,19 @@ footer #player .player_album .current_play{
     }
 }
 
-.player_controller{
-    width: 50%;
+@media (max-width: 800px){
+    .icons_current_play{
+        padding-left: 10px;
+    }
+    
+    .icons_current_play i{
+        padding:  0x;
+        font-size: 20px;
+        color:gray;
+        display: flex;
+    }
+    .player_album img{
+        flex-shrink: 0;
+    }
 }
 
-.player_audio{
-    width: 20%;
-}
