@@ -64,6 +64,16 @@ main .left_nav_bar .nav_bottom{
     background: gray;
 }
 
+main .left_nav_bar .nav_top .nav_logo{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .left_nav_bar .nav_logo img{
+    width: 80%;
+    
+}
 
 /* content */
 
@@ -176,11 +186,18 @@ main .content{
 
 footer #player .player_album{
     display: flex;
+    justify-content: flex-start;
+}
+
+footer #player .player_album div:first-child{
+    width: 50%;
 }
 
 footer #player .player_album img{
-    width: 15%;
     padding-left: 20px;
+    width: 30%;
+    display: cover;
+    overflow:auto;
 }
 .player_album{
     width: 30%;
@@ -194,13 +211,12 @@ footer #player .player_album img{
 }
 
 footer #player .player_album .current_play{
-    padding-left: 20px;
     padding-top: 10px;
 }
 
 
 .icons_current_play{
-    padding-left: 40px;
+
 }
 
 .icons_current_play i{
