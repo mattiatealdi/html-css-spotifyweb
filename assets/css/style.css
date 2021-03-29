@@ -307,8 +307,12 @@ footer #player .player_album{
 }
 
 footer #player .player_album div:first-child{
-    width: 18%;
+    width: 24%;
     margin-right: 20px;
+}
+
+.icons_current_play{
+    margin-left: 20px;
 }
 
 footer #player .player_album img{
@@ -365,6 +369,15 @@ footer #player .player_album .current_play{
 
 #first_time, #second_time{
     font-size: 12px;
+}
+
+#first_time{
+    margin-right: 10px;
+    margin-top: -5px;
+}
+#second_time{
+    margin-left: 10px;
+    margin-top: -5px;
 }
 
 .player_audio{
@@ -435,6 +448,19 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
     visibility: visible;
 }
 
+.upgrade:hover{
+    padding: 40px;
+}
+
+#player .player_album .img{
+    
+}
+
+#player .player_album .img img{
+    width: 80px;
+    margin-right: 40px;
+}
+
 /* media queries */
 @media (max-width: 650px){
     main .left_nav_bar .nav_top .nav_logo_mobile{
@@ -491,14 +517,46 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
         display: none;
     }
 
-    footer .player_album{
-        
+    footer #player .player_album{
+        width: calc(100% / 3);
     }
 
-    footer .player_controller{
+    footer #player .player_controller{
+        width: calc(100% / 3);
+    }
+    footer #player .player_audio{
+        width: calc(100% / 3);
     }
 
-    footer .player_audio{
+    footer #player .player_album .img img{
+        width: 80px;
+        margin-right: 60px;
+    }
+
+    footer .player_controller .player_media ._icons_media{
+        font-size: 1rem;
+    }
+
+    footer .player_controller .player_media .progress_bar{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.5rem;
+    }
+
+    footer .player_controller .player_media .progress_bar #first_time{
+        margin-right: 10px;
+        margin-top:-5px;
+    }
+    footer .player_controller .player_media .progress_bar #second_time{
+        margin-left: 10px;
+        margin-top:-5px;
+    }
+    
+    footer .player_audio .container_player_audio i{
+        font-size: 0.8rem;
+        margin-top: 3px;
     }
 }
 
@@ -529,5 +587,13 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
         float:none;
     }
     
+    footer .player_album{
+        
+    }
+
+    footer #player .player_album div:first-child{
+        width: 40%;
+
+    }
 }
 
