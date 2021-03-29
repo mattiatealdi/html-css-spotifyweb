@@ -55,6 +55,8 @@ main{
 main .left_nav_bar .nav_top{
     height: calc(100% - 80px);
     background: black;
+    display: flex;
+    flex-direction: column;
 }
 
 main .left_nav_bar .nav_top .nav_logo_mobile{
@@ -394,6 +396,21 @@ footer #player .player_album .current_play{
     display: none;
 }
 
+main .left_nav_bar .nav_top .playlists{
+    height: 60%;
+    overflow:hidden;
+}
+
+main .left_nav_bar .nav_top .playlists .new_playlist{
+    height: 80%;
+    overflow-y:auto;
+}
+
+.photo:hover{
+    background-color: rgba(0,0,0, 0.5);
+    background:red;
+}
+
 /* media queries */
 @media (max-width: 600px){
     main .left_nav_bar .nav_top .nav_logo_mobile{
@@ -443,6 +460,10 @@ footer #player .player_album .current_play{
         width: calc(100% - 50px);
     }
     main .nav_bottom{
+        display: none;
+    }
+
+    main .playlists{
         display: none;
     }
 }
