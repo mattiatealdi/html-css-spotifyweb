@@ -162,6 +162,7 @@ main .left_nav_bar .nav_logo ul li div{
     font-size: 30px;
     margin-right: 10px;
     margin-top: 10px;
+    transition: background-color 1s;
 }
 
 .nav_top .playlists{
@@ -170,6 +171,7 @@ main .left_nav_bar .nav_logo ul li div{
 
 .nav_top .add_playlist span{
     color: gray;
+    transition: color 1s;
 }
 
 .owned_playlists{
@@ -186,6 +188,7 @@ main .left_nav_bar .nav_logo ul li div{
 .owned_playlists ul li{
     margin-top: 15px;
     color: gray;
+    transition: color 1s;
 }
 
 .profile{
@@ -285,6 +288,7 @@ main .content{
     font-weight: bold;
     margin-bottom: 20px;
     justify-self: flex-start;
+    transition: color 1s;
 }
 
 .content .covers .upper_nav_bar ul li:first-child{
@@ -309,9 +313,11 @@ main .content{
 
 .covers_row{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
 }
 
 .album_box{
@@ -321,6 +327,7 @@ main .content{
     text-align:center;
     justify-self: flex-start;
     overflow: auto;
+    flex-shrink: 0;
 }
 
 .album_box img{
@@ -469,6 +476,7 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
     height: 100%;
     width: 100%;
     visibility: hidden;
+    transition-delay: 1s;
 }
 
 .photo_active_player{
@@ -478,6 +486,7 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
     transform: translate(-50%, -50%);
     font-size: 4rem;
     visibility: hidden;
+    transition-delay: 1s;
 }
 
 .photo:hover .photo_active,
@@ -485,9 +494,7 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
     visibility: visible;
 }
 
-.upgrade:hover{
-    padding: 40px;
-}
+
 
 #player .player_album .img{
     
@@ -498,17 +505,22 @@ main .left_nav_bar .nav_top .playlists .new_playlist{
     margin-right: 40px;
 }
 
+main .content .call_to_action .upgrade{
+    transition: transform 1s;
+}
 
 main .content .call_to_action .upgrade:hover{
-    transform: scale(1.5, 1.5);
+    transform: scale(1.2, 1.2);
 }
 
 
 .menu_item .menu_text{
     color: gray;
+    transition: color 1s;
 }
 .gray{
     filter: invert(50%);
+    transition: filter 1s;
 }
 
 main .left_nav_bar .menu .menu_item:hover .menu_text{
@@ -542,7 +554,7 @@ footer .player_controller .progress_bar .line_white{
     left:0;
     top:0;
     width: 30%;
-
+    transition: background-color 1s;
 }
 
 footer .player_controller .progress_bar .circle{
@@ -556,6 +568,7 @@ footer .player_controller .progress_bar .circle{
     top:-3px;
     z-index: 99;
     visibility: hidden;
+    transition-delay: 1s;
 }
 
 footer .player_controller .progress_bar:hover .circle{
@@ -576,6 +589,7 @@ footer .player_audio .container_player_audio .line .line_white{
     height: 5px;
     background-color: white;
     border-radius: 5px;
+    transition: background-color 4s;
 }
 
 footer .player_audio .container_player_audio .line .circle{
@@ -589,6 +603,7 @@ footer .player_audio .container_player_audio .line .circle{
     top:-3px;
     z-index: 99;
     visibility: hidden;
+    transition-delay: 1s;
 }
 
 footer .player_audio .container_player_audio .line:hover .line_white{
@@ -597,6 +612,10 @@ footer .player_audio .container_player_audio .line:hover .line_white{
 
 footer .player_audio .container_player_audio .line:hover .circle{
     visibility: visible;
+}
+
+footer .player_controller .player_media ._icons_media i:nth-child(3){
+    transition: transform 1s;
 }
 
 footer .player_controller .player_media ._icons_media i:nth-child(3):hover{
@@ -681,6 +700,7 @@ footer #player .player_album .current_play p:last-child:hover{
         display: none;
     }
 
+
     main .playlists{
         display: none;
     }
@@ -726,6 +746,8 @@ footer #player .player_album .current_play p:last-child:hover{
         font-size: 0.8rem;
         margin-top: 3px;
     }
+
+    
 }
 
 
@@ -766,3 +788,9 @@ footer #player .player_album .current_play p:last-child:hover{
     }
 }
 
+@media (max-height: 300px){
+    .call_to_action{
+        display: none;
+        visibility: hidden;
+    }
+}
